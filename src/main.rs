@@ -1,4 +1,4 @@
-use scaffoldzk::get_address_input;
+use scaffoldzk::get_address;
 pub mod scaffoldzk;
 use zk_rust_io;
 
@@ -27,8 +27,8 @@ fn main() {
 
 fn input() {
     let mut eth_address = String::new();
-    let userinput = "Please enter your Ethereum address:";
-    eth_address.push_str(&get_address_input(userinput)); 
+    let placeholder = "Please enter your Ethereum address:";
+    eth_address.push_str(&get_address(placeholder)); 
     println!("addr is here: {}",  eth_address);
     zk_rust_io::write(&eth_address);
 }
