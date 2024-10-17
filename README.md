@@ -31,16 +31,33 @@ Example, you can get and check easily eth address from user and check is it vali
 ## Get eth address as input & check validity.
 
 ```shell
-use scaffoldzk::get_address_input;
+use scaffoldzk::get_address;
 pub mod scaffoldzk;
 let mut eth_address = String::new();
-let userinput = "Please enter your Ethereum address:";
-eth_address.push_str(&get_address_input(userinput)); 
+let placeholder = "Please enter your Ethereum address:";
+eth_address.push_str(&get_address_input(placeholder)); 
+```
+
+
+## Get string and check max length
+
+```shell
+use scaffoldzk::get_string;
+pub mod scaffoldzk;
+
+
+let mut getstring = String::new();
+let placeholder = "Please enter your Ethereum address:";
+getstring.push_str(&get_string_input(placeholder)); 
 ```
 
 ## Ask questions and get answers
 
 ```shell
+use scaffoldzk::ask_question;
+pub mod scaffoldzk;
+
+
 let mut user_answers = "".to_string();
 let question1 = "Who invented bitcoin";
 let answers1 = ["Sreeram Kannan", "Vitalik Buterin", "Satoshi Nakamoto"];

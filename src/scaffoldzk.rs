@@ -1,7 +1,7 @@
 //Get address input
-pub fn get_address_input(input: &str) -> String {
-    println!("Your input is here : {}", input);
-    read_address() // Adresi almak için `read_address` fonksiyonunu çağırıyoruz
+pub fn get_address(placeholder: &str) -> String {
+    println!("Your input is here : {}", placeholder);
+    read_address() 
 }
 
 fn is_valid_address(address: &str) -> bool {
@@ -29,6 +29,40 @@ fn read_address() -> String {
 }
 
 //Get string input
+
+pub fn get_string(placeholder: &str, max_length: usize) -> String {
+    println!("Your input is here : {}", placeholder);
+    read_string(max_length) 
+}
+
+fn is_valid_length(input: &str, max_len: usize) -> bool {
+    // String'in maksimum uzunluk sınırını kontrol eder
+    input.len() <= max_len
+}
+
+fn read_string(max_length: usize) -> String {
+    loop {
+        let mut input = String::new();
+
+        std::io::stdin()
+            .read_line(&mut input)
+            .expect("Failed to read from stdin");
+
+        input = input.trim().to_string();
+
+        // Sadece maksimum uzunluk kontrolü yapılır
+        if !is_valid_length(&input, max_length) {
+            println!("Please enter a string with a maximum of {} characters. You entered {} characters.", max_length, input.len());
+            continue;
+        }
+
+        return input;
+    }
+}
+
+ 
+
+
 
 //Get integer input with digit
 
