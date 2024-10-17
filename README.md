@@ -101,9 +101,9 @@ user_answers.push(ask_question(question3, &answers3));
 ## Developer & Contributor commants.
 
 ```shell
-sudo cargo run --release -- prove-sp1 examples/scaffoldzk
+sudo cargo run --release -- prove-sp1 examples/scaffold-zk
 
-sudo cargo run --release -- prove-sp1 examples/scaffoldzk --submit-to-aligned --keystore-path ~/.foundry/keystores/key.json
+sudo cargo run --release -- prove-sp1 examples/scaffold-zk --submit-to-aligned --keystore-path ~/.foundry/keystores/key.json
 ```
 
 When you create an ELF file.
