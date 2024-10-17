@@ -1,7 +1,7 @@
 use std::io;
 //Get address input
 pub fn get_address(placeholder: &str) -> String {
-    println!("Your input is here : {}", placeholder);
+    println!("{}\n", placeholder);
     read_address() 
 }
 
@@ -32,12 +32,11 @@ fn read_address() -> String {
 //Get string input
 
 pub fn get_string(placeholder: &str, max_length: usize) -> String {
-    println!("Your input is here : {}", placeholder);
+    println!("{}\n", placeholder);
     read_string(max_length) 
 }
 
 fn is_valid_length(input: &str, max_len: usize) -> bool {
-    // String'in maksimum uzunluk sınırını kontrol eder
     input.len() <= max_len
 }
 
@@ -63,19 +62,17 @@ fn read_string(max_length: usize) -> String {
 
 //Get integer input with digit
 
-pub fn get_integer(prompt: &str, max_value: i32) -> i32 {
+pub fn get_integer(prompt: &str, max_length: usize) -> usize {
     println!("{}", prompt);
-    read_integer(max_value)
+    read_integer(max_length)
 }
 
-fn is_valid_integer(input: &str, max_value: i32) -> bool {
-    match input.parse::<i32>() {
-        Ok(value) => value <= max_value,
-        Err(_) => false,
-    }
+fn is_valid_integer(input: &str, max_length: usize) -> bool {
+    // Girdinin yalnızca rakamlardan oluşup oluşmadığını ve belirtilen uzunluğu aşmadığını kontrol et
+    input.chars().all(|c| c.is_digit(10)) && input.len() <= max_length
 }
 
-fn read_integer(max_value: i32) -> i32 {
+fn read_integer(max_length: usize) -> usize {
     loop {
         let mut input = String::new();
 
@@ -85,13 +82,13 @@ fn read_integer(max_value: i32) -> i32 {
 
         input = input.trim().to_string();
 
-        if !is_valid_integer(&input, max_value) {
-            println!("Please enter a valid integer less than or equal to {}. You entered: {}", max_value, input);
+        if !is_valid_integer(&input, max_length) {
+            println!("Please enter a valid integer with at most {} digits. You entered: {}", max_length, input);
             continue;
         }
 
-        // Girdi geçerli bir integer olduğunda döndür
-        return input.parse().expect("Failed to parse integer");
+        // Geçerli bir integer döndür
+        return input.parse::<usize>().expect("Failed to parse integer");
     }
 }
 

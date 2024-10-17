@@ -44,25 +44,22 @@ eth_address.push_str(&get_address_input(placeholder));
 ```shell
 use scaffoldzk::get_string;
 pub mod scaffoldzk;
-
-
 let mut getstring = String::new();
+let max_length = 20;  
 let placeholder = "Please enter your text:";
-getstring.push_str(&get_string_input(placeholder)); 
+getstring.push_str(&get_string(placeholder, max_length)); 
+println!("Your string is here:  {}", getstring);
 ```
-
 
 ## Get Integer and check max length
 
 ```shell
 use scaffoldzk::get_integer;
 pub mod scaffoldzk;
-
- let max_length = 42;  
+let max_length = 4;  
 let placeholder = "Please enter your integer:";
 let getint = get_integer(placeholder, max_length); 
-
-println!("Your PIN or Number is: {}", getint);  
+println!("Your PIN or Number is: {}", getint); 
 ```
 
 

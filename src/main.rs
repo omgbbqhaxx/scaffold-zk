@@ -1,4 +1,6 @@
 use scaffoldzk::get_address;
+use scaffoldzk::get_integer;
+use scaffoldzk::get_string;
 pub mod scaffoldzk;
 use zk_rust_io;
 
@@ -29,7 +31,28 @@ fn input() {
     let mut eth_address = String::new();
     let placeholder = "Please enter your Ethereum address:";
     eth_address.push_str(&get_address(placeholder)); 
-    println!("addr is here: {}",  eth_address);
+    println!("Eth address is here: {}",  eth_address);
+
+    let mut getstring = String::new();
+    let max_length = 20;  
+    let placeholder = "Please enter your text:";
+    getstring.push_str(&get_string(placeholder, max_length)); 
+
+    println!("Your string is here:  {}", getstring);
+
+
+    let max_length = 4;  
+    let placeholder = "Please enter your integer:";
+    let getint = get_integer(placeholder, max_length); 
+
+    println!("Your PIN or Number is: {}", getint);  
+
+
+
+
+
+
+
     zk_rust_io::write(&eth_address);
 }
 
