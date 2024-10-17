@@ -27,6 +27,9 @@ You can easily get address, string, integer inputs using scaffold-zk.
 
 Example, you can get and check easily eth address from user and check is it valid : 
 
+
+# Get eth address as input & check validity.
+
 ```shell
 use scaffoldzk::get_address_input;
 pub mod scaffoldzk;
@@ -35,8 +38,22 @@ let userinput = "Please enter your Ethereum address:";
 eth_address.push_str(&get_address_input(userinput)); 
 ```
 
+# Ask questions and get answers
 
+```shell
+let mut user_answers = "".to_string();
+let question1 = "Who invented bitcoin";
+let answers1 = ["Sreeram Kannan", "Vitalik Buterin", "Satoshi Nakamoto"];
+user_answers.push(ask_question(question1, &answers1));
 
+let question2 = "What is the largest ocean on Earth?";
+let answers2 = ["Atlantic", "Indian", "Pacific"];
+user_answers.push(ask_question(question2, &answers2));
+
+let question3 = "What is the most aligned color";
+let answers3 = ["Green", "Red", "Blue"];
+user_answers.push(ask_question(question3, &answers3));
+```
 
 
 
