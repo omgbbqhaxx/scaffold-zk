@@ -9,8 +9,8 @@ Welcome to the Scaffold-ZK.
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://x.com/yasinaktimur/)
 [![GitHub Issues](https://img.shields.io/badge/open%20issues-0-yellow.svg)](https://github.com/omgbbqhaxx/zkmine/issues)
 
-- Chat in [twitter](https://x.com/yasinaktimur).
-- Submit your zk-app [Google forms](https://forms.gle/YKo3P8XSDx4KYD768).
+- Aligned layer [twitter address](https://x.com/alignedlayer).
+- Docs  [docs.alignedlayer.](https://docs.alignedlayer.com).
 
 
 
