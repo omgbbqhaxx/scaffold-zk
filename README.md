@@ -39,12 +39,25 @@ eth_address.push_str(&get_address_input(userinput));
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Developer & Contributor commants.
 
 ```shell
-sudo cargo run --release -- prove-sp1 examples/zkmine
+sudo cargo run --release -- prove-sp1 examples/scaffoldzk
 
-sudo cargo run --release -- prove-sp1 examples/zkmine --submit-to-aligned --keystore-path ~/.foundry/keystores/key.json
+sudo cargo run --release -- prove-sp1 examples/scaffoldzk --submit-to-aligned --keystore-path ~/.foundry/keystores/key.json
 ```
 
 When you create an ELF file.
