@@ -47,9 +47,24 @@ pub mod scaffoldzk;
 
 
 let mut getstring = String::new();
-let placeholder = "Please enter your Ethereum address:";
+let placeholder = "Please enter your text:";
 getstring.push_str(&get_string_input(placeholder)); 
 ```
+
+
+## Get Integer and check max length
+
+```shell
+use scaffoldzk::get_integer;
+pub mod scaffoldzk;
+
+ let max_length = 42;  
+let placeholder = "Please enter your integer:";
+let getint = get_integer(placeholder, max_length); 
+
+println!("Your PIN or Number is: {}", getint);  
+```
+
 
 ## Ask questions and get answers
 

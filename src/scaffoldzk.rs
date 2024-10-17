@@ -60,11 +60,40 @@ fn read_string(max_length: usize) -> String {
     }
 }
 
- 
-
-
-
 //Get integer input with digit
+
+pub fn get_integer(prompt: &str, max_value: i32) -> i32 {
+    println!("{}", prompt);
+    read_integer(max_value)
+}
+
+fn is_valid_integer(input: &str, max_value: i32) -> bool {
+    match input.parse::<i32>() {
+        Ok(value) => value <= max_value,
+        Err(_) => false,
+    }
+}
+
+fn read_integer(max_value: i32) -> i32 {
+    loop {
+        let mut input = String::new();
+
+        io::stdin()
+            .read_line(&mut input)
+            .expect("Failed to read from stdin");
+
+        input = input.trim().to_string();
+
+        if !is_valid_integer(&input, max_value) {
+            println!("Please enter a valid integer less than or equal to {}. You entered: {}", max_value, input);
+            continue;
+        }
+
+        // Girdi geçerli bir integer olduğunda döndür
+        return input.parse().expect("Failed to parse integer");
+    }
+}
+
 
 //Get ethereum public key and check is valid
 
