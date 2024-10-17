@@ -15,20 +15,8 @@ SP1 | [![TravisCI](https://img.shields.io/badge/build-passing-brightgreen.svg)](
 RISC0         | [![AppVeyor](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://ci.appveyor.com/project/cloudbank/cloudbank-github)
 
 
-- Aligned layer [x.com/alignedlayer](https://x.com/alignedlayer)
-- Docs  [docs.alignedlayer.com](https://docs.alignedlayer.com)
-
-
-
-## Getting Started
-
-Details about zkRust hosts the **[alignedlayer docs](https://github.com/yetanotherco/zkRust/)**  which
-has a Quick Start section.
-
-
- 
-
-
+-  [Alignedlayer Twitter](https://x.com/alignedlayer)
+-  [Alignedlayer Docs](https://docs.alignedlayer.com)
 
 ## Usagement
 
