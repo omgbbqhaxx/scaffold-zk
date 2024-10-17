@@ -9,8 +9,14 @@ Welcome to the Scaffold-ZK.
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://x.com/yasinaktimur/)
 [![GitHub Issues](https://img.shields.io/badge/open%20issues-0-yellow.svg)](https://github.com/omgbbqhaxx/zkmine/issues)
 
-- Aligned layer [twitter address](https://x.com/alignedlayer).
-- Docs  [docs.alignedlayer.](https://docs.alignedlayer.com).
+ZKVM's | Status
+---------------- | ----------
+SP1 | [![TravisCI](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://travis-ci.org/cloudbank/cloudbank-github)
+RISC0         | [![AppVeyor](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://ci.appveyor.com/project/cloudbank/cloudbank-github)
+
+
+- Aligned layer [x.com/alignedlayer](https://x.com/alignedlayer)
+- Docs  [docs.alignedlayer.com](https://docs.alignedlayer.com)
 
 
 
@@ -19,10 +25,6 @@ Welcome to the Scaffold-ZK.
 Details about zkRust hosts the **[alignedlayer docs](https://github.com/yetanotherco/zkRust/)**  which
 has a Quick Start section.
 
-ZKVM's | Status
----------------- | ----------
-SP1 | [![TravisCI](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://travis-ci.org/cloudbank/cloudbank-github)
-RISC0         | [![AppVeyor](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://ci.appveyor.com/project/cloudbank/cloudbank-github)
 
  
 
