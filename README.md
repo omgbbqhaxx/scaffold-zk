@@ -85,20 +85,8 @@ user_answers.push(ask_question(question3, &answers3));
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Developer & Contributor commants.
+
 
 ```shell
 sudo cargo run --release -- prove-sp1 examples/scaffold-zk
@@ -106,18 +94,27 @@ sudo cargo run --release -- prove-sp1 examples/scaffold-zk
 sudo cargo run --release -- prove-sp1 examples/scaffold-zk --submit-to-aligned --keystore-path ~/.foundry/keystores/key.json
 ```
 
+
+
+Our aligned proof is here : https://explorer.alignedlayer.com/batches/0x5393328194acb68fed5284b2318ff886edff9da924da5b342caaf42be9c62478
+
+Our smart contract is here : https://holesky.etherscan.io/tx/0xe774ddb285ddcddb066dced9b9c7b19031343c00813a5b835d1d60f7137fef59
+
+
+
+
 When you create an ELF file.
 
 Clone the aligned repo and run 
 
-sudo make install_aligned_compiling
-
-If the binary doesn’t work
-
 ```shell
+sudo make install_aligned_compiling
 aligned get-vk-commitment --verification_key_file <path_to_input_file> --proving_system SP1
 ```
-
+Our official commit.
+```shell
+[2024-10-18T01:18:59Z INFO  aligned] Commitment: fb51b2712031ca8b29657ecf09688eeb6c160be9ccf9b1304a97465015057f1e
+```
 ## License
 
 [![License](https://img.shields.io/github/license/ethereum/cpp-ethereum.svg)](LICENSE)
